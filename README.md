@@ -1,5 +1,6 @@
 # pyurlon
 
+[![CI - Main](https://github.com/adamws/pyurlon/actions/workflows/main.yml/badge.svg)](https://github.com/adamws/pyurlon/actions/workflows/main.yml)
 [![PyPI - Version](https://img.shields.io/pypi/v/pyurlon.svg)](https://pypi.org/project/pyurlon)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyurlon.svg)](https://pypi.org/project/pyurlon)
 
