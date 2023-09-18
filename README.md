@@ -5,15 +5,29 @@
 
 -----
 
+This is python port of [urlon](https://github.com/cerebral/urlon) javascript package.
+It is compatible with urlon version 3.1.0.
+
 **Table of Contents**
 
 - [Installation](#installation)
+- [Usage](#usage)
 - [License](#license)
 
 ## Installation
 
 ```console
 pip install pyurlon
+```
+
+## Usage
+
+```python
+>>> import pyurlon
+>>> pyurlon.stringify({"table":{"achievement":{"column":"instance","ascending":True}}})
+'$table$achievement$column=instance&ascending:true'
+>>> pyurlon.parse("$table$achievement$column=instance&ascending:true")
+{'table': {'achievement': {'column': 'instance', 'ascending': True}}}
 ```
 
 ## License
