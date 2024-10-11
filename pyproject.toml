@@ -42,6 +42,7 @@ path = "src/pyurlon/__about__.py"
 [tool.hatch.envs.default]
 dependencies = [
   "coverage[toml]>=6.5",
+  "coveralls>=3.0.0",
   "pytest",
 ]
 [tool.hatch.envs.default.scripts]
