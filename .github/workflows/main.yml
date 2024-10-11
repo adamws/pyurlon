@@ -62,8 +62,12 @@ jobs:
     needs:
     - pure-python-wheel-and-sdist
     runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/pyurlon
+    permissions:
+      id-token: write
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
-
     steps:
     - uses: actions/download-artifact@v4
       with:
@@ -72,6 +76,4 @@ jobs:
     - name: Push build artifacts to PyPI
       uses: pypa/gh-action-pypi-publish@v1.10.3
       with:
-        skip_existing: true
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+        skip-existing: true
